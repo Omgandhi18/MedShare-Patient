@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0724BB0D3D931ADAAF401566 /* Pods_MedShare_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408FCBCF171C9F761D49308A /* Pods_MedShare_PatientTests.framework */; };
+		3AF11C7273E797E6F0F8BA8F /* Pods_MedShare_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DAEE568C98C0E6E4A7D0EE /* Pods_MedShare_Patient.framework */; };
 		C0132C4F2BEB7656005EC7AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C4E2BEB7656005EC7AC /* AppDelegate.swift */; };
 		C0132C512BEB7656005EC7AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C502BEB7656005EC7AC /* SceneDelegate.swift */; };
 		C0132C532BEB7656005EC7AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C522BEB7656005EC7AC /* ViewController.swift */; };
@@ -16,6 +18,10 @@
 		C0132C662BEB7657005EC7AC /* MedShare_PatientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C652BEB7657005EC7AC /* MedShare_PatientTests.swift */; };
 		C0132C702BEB7657005EC7AC /* MedShare_PatientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C6F2BEB7657005EC7AC /* MedShare_PatientUITests.swift */; };
 		C0132C722BEB7657005EC7AC /* MedShare_PatientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C712BEB7657005EC7AC /* MedShare_PatientUITestsLaunchTests.swift */; };
+		C0132C812BEB7743005EC7AC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C802BEB7743005EC7AC /* LoginVC.swift */; };
+		C0132C832BEB7775005EC7AC /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C822BEB7775005EC7AC /* RegisterVC.swift */; };
+		C0132C852BEB7790005EC7AC /* MedicalInfoRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */; };
+		C85E3F101D686841CE2DCFCC /* Pods_MedShare_Patient_MedShare_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBC9C821BE33BA23F501EBE /* Pods_MedShare_Patient_MedShare_PatientUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BBC9C821BE33BA23F501EBE /* Pods_MedShare_Patient_MedShare_PatientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedShare_Patient_MedShare_PatientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F19F4F038DDE286A22CB54B /* Pods-MedShare PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare PatientTests.release.xcconfig"; path = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests.release.xcconfig"; sourceTree = "<group>"; };
+		408FCBCF171C9F761D49308A /* Pods_MedShare_PatientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedShare_PatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DAEE568C98C0E6E4A7D0EE /* Pods_MedShare_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedShare_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A74C4A04579C0F021B0A19 /* Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig"; path = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests/Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0132C4B2BEB7656005EC7AC /* MedShare Patient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedShare Patient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0132C4E2BEB7656005EC7AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0132C502BEB7656005EC7AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,13 @@
 		C0132C6B2BEB7657005EC7AC /* MedShare PatientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MedShare PatientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0132C6F2BEB7657005EC7AC /* MedShare_PatientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedShare_PatientUITests.swift; sourceTree = "<group>"; };
 		C0132C712BEB7657005EC7AC /* MedShare_PatientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedShare_PatientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0132C802BEB7743005EC7AC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C0132C822BEB7775005EC7AC /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoRegisterVC.swift; sourceTree = "<group>"; };
+		E8245C80D589D7EC37EA4893 /* Pods-MedShare Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare Patient.debug.xcconfig"; path = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient.debug.xcconfig"; sourceTree = "<group>"; };
+		E907EBF636510F925EC557CA /* Pods-MedShare PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare PatientTests.debug.xcconfig"; path = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F30012D3388DEB89815A297E /* Pods-MedShare Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare Patient.release.xcconfig"; path = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient.release.xcconfig"; sourceTree = "<group>"; };
+		FFF25CA1414524D69D0C1493 /* Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig"; path = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests/Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF11C7273E797E6F0F8BA8F /* Pods_MedShare_Patient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0724BB0D3D931ADAAF401566 /* Pods_MedShare_PatientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85E3F101D686841CE2DCFCC /* Pods_MedShare_Patient_MedShare_PatientUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0F6B431488721FCC4E7ECDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8245C80D589D7EC37EA4893 /* Pods-MedShare Patient.debug.xcconfig */,
+				F30012D3388DEB89815A297E /* Pods-MedShare Patient.release.xcconfig */,
+				FFF25CA1414524D69D0C1493 /* Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig */,
+				46A74C4A04579C0F021B0A19 /* Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig */,
+				E907EBF636510F925EC557CA /* Pods-MedShare PatientTests.debug.xcconfig */,
+				3F19F4F038DDE286A22CB54B /* Pods-MedShare PatientTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD1DFDA691F7E71A2D75E8AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43DAEE568C98C0E6E4A7D0EE /* Pods_MedShare_Patient.framework */,
+				0BBC9C821BE33BA23F501EBE /* Pods_MedShare_Patient_MedShare_PatientUITests.framework */,
+				408FCBCF171C9F761D49308A /* Pods_MedShare_PatientTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0132C422BEB7656005EC7AC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +128,8 @@
 				C0132C642BEB7657005EC7AC /* MedShare PatientTests */,
 				C0132C6E2BEB7657005EC7AC /* MedShare PatientUITests */,
 				C0132C4C2BEB7656005EC7AC /* Products */,
+				A0F6B431488721FCC4E7ECDE /* Pods */,
+				BD1DFDA691F7E71A2D75E8AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +179,9 @@
 		C0132C7E2BEB769C005EC7AC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C0132C802BEB7743005EC7AC /* LoginVC.swift */,
+				C0132C822BEB7775005EC7AC /* RegisterVC.swift */,
+				C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0132C752BEB7657005EC7AC /* Build configuration list for PBXNativeTarget "MedShare Patient" */;
 			buildPhases = (
+				F2FCD64E246B8608D38F4DAF /* [CP] Check Pods Manifest.lock */,
 				C0132C472BEB7656005EC7AC /* Sources */,
 				C0132C482BEB7656005EC7AC /* Frameworks */,
 				C0132C492BEB7656005EC7AC /* Resources */,
@@ -167,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0132C782BEB7657005EC7AC /* Build configuration list for PBXNativeTarget "MedShare PatientTests" */;
 			buildPhases = (
+				6BCC29C71359FDF227FD9BE6 /* [CP] Check Pods Manifest.lock */,
 				C0132C5D2BEB7657005EC7AC /* Sources */,
 				C0132C5E2BEB7657005EC7AC /* Frameworks */,
 				C0132C5F2BEB7657005EC7AC /* Resources */,
@@ -185,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0132C7B2BEB7657005EC7AC /* Build configuration list for PBXNativeTarget "MedShare PatientUITests" */;
 			buildPhases = (
+				B3F9F92D5EE59DD539AB596D /* [CP] Check Pods Manifest.lock */,
 				C0132C672BEB7657005EC7AC /* Sources */,
 				C0132C682BEB7657005EC7AC /* Frameworks */,
 				C0132C692BEB7657005EC7AC /* Resources */,
@@ -269,6 +322,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6BCC29C71359FDF227FD9BE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedShare PatientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3F9F92D5EE59DD539AB596D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedShare Patient-MedShare PatientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2FCD64E246B8608D38F4DAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedShare Patient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C0132C472BEB7656005EC7AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -276,7 +398,10 @@
 			files = (
 				C0132C532BEB7656005EC7AC /* ViewController.swift in Sources */,
 				C0132C4F2BEB7656005EC7AC /* AppDelegate.swift in Sources */,
+				C0132C812BEB7743005EC7AC /* LoginVC.swift in Sources */,
+				C0132C852BEB7790005EC7AC /* MedicalInfoRegisterVC.swift in Sources */,
 				C0132C512BEB7656005EC7AC /* SceneDelegate.swift in Sources */,
+				C0132C832BEB7775005EC7AC /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +578,7 @@
 		};
 		C0132C762BEB7657005EC7AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8245C80D589D7EC37EA4893 /* Pods-MedShare Patient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,6 +608,7 @@
 		};
 		C0132C772BEB7657005EC7AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30012D3388DEB89815A297E /* Pods-MedShare Patient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -511,6 +638,7 @@
 		};
 		C0132C792BEB7657005EC7AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E907EBF636510F925EC557CA /* Pods-MedShare PatientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +659,7 @@
 		};
 		C0132C7A2BEB7657005EC7AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F19F4F038DDE286A22CB54B /* Pods-MedShare PatientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +680,7 @@
 		};
 		C0132C7C2BEB7657005EC7AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF25CA1414524D69D0C1493 /* Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,6 +699,7 @@
 		};
 		C0132C7D2BEB7657005EC7AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46A74C4A04579C0F021B0A19 /* Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

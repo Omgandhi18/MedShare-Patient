@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E3B0AC0BE97B469D12F2267F3C95DB6 /* Pods-MedShare Patient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEA353ADC671A3143169AE019721F4 /* Pods-MedShare Patient-dummy.m */; };
+		A9545BADC55A7DD5A7A7D768001E7D69 /* Pods-MedShare PatientTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBFBBA6977564E8E60FC8A6BE8F0B /* Pods-MedShare PatientTests-dummy.m */; };
+		B4CA05CE934529DD01C02C7CF59579B0 /* Pods-MedShare PatientTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1B6AA50C5F5557D8B6C470678A8ABB3 /* Pods-MedShare PatientTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9E780739237AAC9DC228BC293B3E272 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CFD668F5A9A2BC87893A28B0AE9F000E /* Pods-MedShare Patient-MedShare PatientUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 255FA92BF89AF17E0AD14BACB9B6CD3D /* Pods-MedShare Patient-MedShare PatientUITests-dummy.m */; };
+		D40C0700A4511831CA162BF9A9A28694 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DED108E6139AE71621A47646D43931AF /* Pods-MedShare Patient-MedShare PatientUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A826C3D31E28001B5B4584BE4EE6BB2 /* Pods-MedShare Patient-MedShare PatientUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E31776B0735AA34065DEEEFA330AC86B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F9147D3E5BAC5D7AEADA00690878276A /* Pods-MedShare Patient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C83C546AB3E5154C302FB52815D9A05A /* Pods-MedShare Patient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46FF89F0E541B61260086FF522F76661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041E004B565A996FB4FB3D0AF45DD710;
+			remoteInfo = "Pods-MedShare Patient";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04EEBFBBA6977564E8E60FC8A6BE8F0B /* Pods-MedShare PatientTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedShare PatientTests-dummy.m"; sourceTree = "<group>"; };
+		08F32961CEF809BD82205E737BC70887 /* Pods-MedShare PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedShare PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D9469A34DFC3FCF794BE4F013D46F81 /* Pods-MedShare Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedShare Patient.debug.xcconfig"; sourceTree = "<group>"; };
+		1C9CE0DAB3AEF08C8BD67E61FCC0A31C /* Pods-MedShare PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedShare PatientTests.release.xcconfig"; sourceTree = "<group>"; };
+		255FA92BF89AF17E0AD14BACB9B6CD3D /* Pods-MedShare Patient-MedShare PatientUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedShare Patient-MedShare PatientUITests-dummy.m"; sourceTree = "<group>"; };
+		3052C130527CA73A71C52F621FDF6E21 /* Pods-MedShare PatientTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedShare PatientTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		34CE1F6B7E4F82A44D41FDD67AC2471C /* Pods-MedShare Patient */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MedShare Patient"; path = Pods_MedShare_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46190FD1F9C40344907BA3C79A88D922 /* Pods-MedShare Patient-MedShare PatientUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MedShare Patient-MedShare PatientUITests"; path = Pods_MedShare_Patient_MedShare_PatientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B734A422B9F0160B7769C88ACAA3B2F /* Pods-MedShare Patient-MedShare PatientUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedShare Patient-MedShare PatientUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4C19B47EF6363A2940392B426BE40364 /* Pods-MedShare Patient-MedShare PatientUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedShare Patient-MedShare PatientUITests.modulemap"; sourceTree = "<group>"; };
+		4ECEA353ADC671A3143169AE019721F4 /* Pods-MedShare Patient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedShare Patient-dummy.m"; sourceTree = "<group>"; };
+		5B04FAABD630216019797FE0C335C43A /* Pods-MedShare Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedShare Patient.release.xcconfig"; sourceTree = "<group>"; };
+		5CAFF111330A8880064E00636606EBF2 /* Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		75230B5988B7686CD727577D58327153 /* Pods-MedShare PatientTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedShare PatientTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7DB34D4517D31CE5D172A61B8E486C13 /* Pods-MedShare Patient-MedShare PatientUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedShare Patient-MedShare PatientUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E81DFF15018C16A27D0DE6FFEC4F786 /* Pods-MedShare Patient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedShare Patient-acknowledgements.plist"; sourceTree = "<group>"; };
+		916F169CB6EE6438F173C5E2540B88B9 /* Pods-MedShare Patient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedShare Patient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A826C3D31E28001B5B4584BE4EE6BB2 /* Pods-MedShare Patient-MedShare PatientUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedShare Patient-MedShare PatientUITests-umbrella.h"; sourceTree = "<group>"; };
+		9D02480215E73DB7288123EA713CA882 /* Pods-MedShare Patient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedShare Patient-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1B6AA50C5F5557D8B6C470678A8ABB3 /* Pods-MedShare PatientTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedShare PatientTests-umbrella.h"; sourceTree = "<group>"; };
+		A7429131C33BE63364356A6281F048A2 /* Pods-MedShare PatientTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedShare PatientTests-Info.plist"; sourceTree = "<group>"; };
+		BB1B9A0C8F9DB5B4786EED18E89AD126 /* Pods-MedShare Patient-MedShare PatientUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedShare Patient-MedShare PatientUITests-Info.plist"; sourceTree = "<group>"; };
+		BBE95972F308113DE89374A581F2D7DE /* Pods-MedShare PatientTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedShare PatientTests.modulemap"; sourceTree = "<group>"; };
+		C7DB9520DD4D577EA95D4134280484DF /* Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C83C546AB3E5154C302FB52815D9A05A /* Pods-MedShare Patient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedShare Patient-umbrella.h"; sourceTree = "<group>"; };
+		D9D63E92E165547A901B76BE255F603F /* Pods-MedShare Patient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedShare Patient.modulemap"; sourceTree = "<group>"; };
+		E376F198D751C927C93F663E28FF3E2B /* Pods-MedShare PatientTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MedShare PatientTests"; path = Pods_MedShare_PatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		127A8E84008F51DAD941244B941C43F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40C0700A4511831CA162BF9A9A28694 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814C14B68522CF71E5D8A6E86A35938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31776B0735AA34065DEEEFA330AC86B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		890D59F916522A9750405A02341F8D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E780739237AAC9DC228BC293B3E272 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B965C2E29D8234506A689F86AFB427C /* Pods-MedShare Patient */ = {
+			isa = PBXGroup;
+			children = (
+				D9D63E92E165547A901B76BE255F603F /* Pods-MedShare Patient.modulemap */,
+				916F169CB6EE6438F173C5E2540B88B9 /* Pods-MedShare Patient-acknowledgements.markdown */,
+				8E81DFF15018C16A27D0DE6FFEC4F786 /* Pods-MedShare Patient-acknowledgements.plist */,
+				4ECEA353ADC671A3143169AE019721F4 /* Pods-MedShare Patient-dummy.m */,
+				9D02480215E73DB7288123EA713CA882 /* Pods-MedShare Patient-Info.plist */,
+				C83C546AB3E5154C302FB52815D9A05A /* Pods-MedShare Patient-umbrella.h */,
+				0D9469A34DFC3FCF794BE4F013D46F81 /* Pods-MedShare Patient.debug.xcconfig */,
+				5B04FAABD630216019797FE0C335C43A /* Pods-MedShare Patient.release.xcconfig */,
+			);
+			name = "Pods-MedShare Patient";
+			path = "Target Support Files/Pods-MedShare Patient";
+			sourceTree = "<group>";
+		};
+		3E7F64C9A0F4B73ACFC1839AE4DCBE53 /* Pods-MedShare Patient-MedShare PatientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C19B47EF6363A2940392B426BE40364 /* Pods-MedShare Patient-MedShare PatientUITests.modulemap */,
+				4B734A422B9F0160B7769C88ACAA3B2F /* Pods-MedShare Patient-MedShare PatientUITests-acknowledgements.markdown */,
+				7DB34D4517D31CE5D172A61B8E486C13 /* Pods-MedShare Patient-MedShare PatientUITests-acknowledgements.plist */,
+				255FA92BF89AF17E0AD14BACB9B6CD3D /* Pods-MedShare Patient-MedShare PatientUITests-dummy.m */,
+				BB1B9A0C8F9DB5B4786EED18E89AD126 /* Pods-MedShare Patient-MedShare PatientUITests-Info.plist */,
+				9A826C3D31E28001B5B4584BE4EE6BB2 /* Pods-MedShare Patient-MedShare PatientUITests-umbrella.h */,
+				C7DB9520DD4D577EA95D4134280484DF /* Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig */,
+				5CAFF111330A8880064E00636606EBF2 /* Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig */,
+			);
+			name = "Pods-MedShare Patient-MedShare PatientUITests";
+			path = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		61992CC7B8FF96605CDA42F35CC05A00 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B965C2E29D8234506A689F86AFB427C /* Pods-MedShare Patient */,
+				3E7F64C9A0F4B73ACFC1839AE4DCBE53 /* Pods-MedShare Patient-MedShare PatientUITests */,
+				E2FCD8B7678ED5EDF502BDE18B54526A /* Pods-MedShare PatientTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DF46FC8519CF3237018A589B764A81CC /* Products */,
+				61992CC7B8FF96605CDA42F35CC05A00 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF46FC8519CF3237018A589B764A81CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34CE1F6B7E4F82A44D41FDD67AC2471C /* Pods-MedShare Patient */,
+				46190FD1F9C40344907BA3C79A88D922 /* Pods-MedShare Patient-MedShare PatientUITests */,
+				E376F198D751C927C93F663E28FF3E2B /* Pods-MedShare PatientTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2FCD8B7678ED5EDF502BDE18B54526A /* Pods-MedShare PatientTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBE95972F308113DE89374A581F2D7DE /* Pods-MedShare PatientTests.modulemap */,
+				3052C130527CA73A71C52F621FDF6E21 /* Pods-MedShare PatientTests-acknowledgements.markdown */,
+				75230B5988B7686CD727577D58327153 /* Pods-MedShare PatientTests-acknowledgements.plist */,
+				04EEBFBBA6977564E8E60FC8A6BE8F0B /* Pods-MedShare PatientTests-dummy.m */,
+				A7429131C33BE63364356A6281F048A2 /* Pods-MedShare PatientTests-Info.plist */,
+				A1B6AA50C5F5557D8B6C470678A8ABB3 /* Pods-MedShare PatientTests-umbrella.h */,
+				08F32961CEF809BD82205E737BC70887 /* Pods-MedShare PatientTests.debug.xcconfig */,
+				1C9CE0DAB3AEF08C8BD67E61FCC0A31C /* Pods-MedShare PatientTests.release.xcconfig */,
+			);
+			name = "Pods-MedShare PatientTests";
+			path = "Target Support Files/Pods-MedShare PatientTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1B7F4E670300EF37D289D7F905AF523B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9147D3E5BAC5D7AEADA00690878276A /* Pods-MedShare Patient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		732ECCC6C28202AEDBD08A98E28BD947 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED108E6139AE71621A47646D43931AF /* Pods-MedShare Patient-MedShare PatientUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE897FCF0B097DA9DA36321268D20723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4CA05CE934529DD01C02C7CF59579B0 /* Pods-MedShare PatientTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		041E004B565A996FB4FB3D0AF45DD710 /* Pods-MedShare Patient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B4E9F11CFEFE3F5EABDEE8E78CD3FD8 /* Build configuration list for PBXNativeTarget "Pods-MedShare Patient" */;
+			buildPhases = (
+				1B7F4E670300EF37D289D7F905AF523B /* Headers */,
+				E18983F5104608EE6615F63C9F27AB89 /* Sources */,
+				127A8E84008F51DAD941244B941C43F7 /* Frameworks */,
+				E608D770F4F11DAD5075EC8EE8CE7D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MedShare Patient";
+			productName = Pods_MedShare_Patient;
+			productReference = 34CE1F6B7E4F82A44D41FDD67AC2471C /* Pods-MedShare Patient */;
+			productType = "com.apple.product-type.framework";
+		};
+		72CDE69317294F2DBFAB718E54025F01 /* Pods-MedShare PatientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2AE741ED5E3D17E8745DE49A9E9F105 /* Build configuration list for PBXNativeTarget "Pods-MedShare PatientTests" */;
+			buildPhases = (
+				FE897FCF0B097DA9DA36321268D20723 /* Headers */,
+				F168A4052669824F73842AD099173AF5 /* Sources */,
+				890D59F916522A9750405A02341F8D77 /* Frameworks */,
+				46FDF1F47470CBA566E2D70E55827409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				902CFF0877BBE6B750B123BD1E63A44F /* PBXTargetDependency */,
+			);
+			name = "Pods-MedShare PatientTests";
+			productName = Pods_MedShare_PatientTests;
+			productReference = E376F198D751C927C93F663E28FF3E2B /* Pods-MedShare PatientTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		A89F622A17F9F034847A54E00B0E38D4 /* Pods-MedShare Patient-MedShare PatientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B8AA007CF00E03FB613C8302C5450F /* Build configuration list for PBXNativeTarget "Pods-MedShare Patient-MedShare PatientUITests" */;
+			buildPhases = (
+				732ECCC6C28202AEDBD08A98E28BD947 /* Headers */,
+				BB3E494DAFB4DD42865EC9267D087BC1 /* Sources */,
+				7814C14B68522CF71E5D8A6E86A35938 /* Frameworks */,
+				0E5119886313966A78831AC1A007468F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MedShare Patient-MedShare PatientUITests";
+			productName = Pods_MedShare_Patient_MedShare_PatientUITests;
+			productReference = 46190FD1F9C40344907BA3C79A88D922 /* Pods-MedShare Patient-MedShare PatientUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DF46FC8519CF3237018A589B764A81CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041E004B565A996FB4FB3D0AF45DD710 /* Pods-MedShare Patient */,
+				A89F622A17F9F034847A54E00B0E38D4 /* Pods-MedShare Patient-MedShare PatientUITests */,
+				72CDE69317294F2DBFAB718E54025F01 /* Pods-MedShare PatientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E5119886313966A78831AC1A007468F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FDF1F47470CBA566E2D70E55827409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E608D770F4F11DAD5075EC8EE8CE7D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB3E494DAFB4DD42865EC9267D087BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD668F5A9A2BC87893A28B0AE9F000E /* Pods-MedShare Patient-MedShare PatientUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18983F5104608EE6615F63C9F27AB89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3B0AC0BE97B469D12F2267F3C95DB6 /* Pods-MedShare Patient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F168A4052669824F73842AD099173AF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9545BADC55A7DD5A7A7D768001E7D69 /* Pods-MedShare PatientTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		902CFF0877BBE6B750B123BD1E63A44F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MedShare Patient";
+			target = 041E004B565A996FB4FB3D0AF45DD710 /* Pods-MedShare Patient */;
+			targetProxy = 46FF89F0E541B61260086FF522F76661 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		40BC37A01A56F64BADA9F2B70902F2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CAFF111330A8880064E00636606EBF2 /* Pods-MedShare Patient-MedShare PatientUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests/Pods-MedShare Patient-MedShare PatientUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests/Pods-MedShare Patient-MedShare PatientUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5141846EC422CD47E0226D64C7158AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9CE0DAB3AEF08C8BD67E61FCC0A31C /* Pods-MedShare PatientTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C9B3A3B90D412FE176CE84563C1D4A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B04FAABD630216019797FE0C335C43A /* Pods-MedShare Patient.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87DDB967E7F0821FBEACA2C1F774EEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F32961CEF809BD82205E737BC70887 /* Pods-MedShare PatientTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C873D3C071BDDC046D6E8F63C69C2591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F107A58160676B7AB5057569341562B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7DB9520DD4D577EA95D4134280484DF /* Pods-MedShare Patient-MedShare PatientUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests/Pods-MedShare Patient-MedShare PatientUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedShare Patient-MedShare PatientUITests/Pods-MedShare Patient-MedShare PatientUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2130524C947FFBE51BD04093A979100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9469A34DFC3FCF794BE4F013D46F81 /* Pods-MedShare Patient.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18B8AA007CF00E03FB613C8302C5450F /* Build configuration list for PBXNativeTarget "Pods-MedShare Patient-MedShare PatientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F107A58160676B7AB5057569341562B1 /* Debug */,
+				40BC37A01A56F64BADA9F2B70902F2AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */,
+				C873D3C071BDDC046D6E8F63C69C2591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B4E9F11CFEFE3F5EABDEE8E78CD3FD8 /* Build configuration list for PBXNativeTarget "Pods-MedShare Patient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2130524C947FFBE51BD04093A979100 /* Debug */,
+				5C9B3A3B90D412FE176CE84563C1D4A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2AE741ED5E3D17E8745DE49A9E9F105 /* Build configuration list for PBXNativeTarget "Pods-MedShare PatientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87DDB967E7F0821FBEACA2C1F774EEC5 /* Debug */,
+				5141846EC422CD47E0226D64C7158AD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
