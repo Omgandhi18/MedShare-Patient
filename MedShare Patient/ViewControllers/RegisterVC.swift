@@ -29,6 +29,30 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func btnContinue(_ sender: Any) {
+        guard let name = txtFullName.text,
+              let email = txtEmail.text,
+              let pass = txtPass.text,
+              let mobile = txtMobile.text else{
+            return
+        }
+        if name.isEmpty{
+            showToastAlert(strmsg: "Name field cannot be blank", preferredStyle: .alert)
+        }
+        else if email.isEmpty{
+            showToastAlert(strmsg: "Email field cannot be blank", preferredStyle: .alert)
+        }
+        else if mobile.isEmpty{
+            showToastAlert(strmsg: "Mobile Number field cannot be blank", preferredStyle: .alert)
+        }
+        else if pass.isEmpty{
+            showToastAlert(strmsg: "Password field cannot be blank", preferredStyle: .alert)
+        }
+        else{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MedicalInfoRegisterStory") as! MedicalInfoRegisterVC
+            vc.medAppUser = MedAppUser(name: name, email: email, mobileNumber: mobile, age: 0, gender: "", height: "", weight: 0, allergies: "", bloodGrp: "", insurance: false)
+            vc.userCredentials = ["email" : email,"pass" : pass]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 
