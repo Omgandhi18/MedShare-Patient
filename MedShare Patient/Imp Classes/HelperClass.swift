@@ -91,3 +91,34 @@ extension UIAlertController {
         self.view.tintColor = color
     }
 }
+extension UIButton{
+    func makeButtonRoundWithShadow(){
+        self.layer.cornerRadius = self.frame.size.height/2
+        self.layer.masksToBounds = true
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 10)
+        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.25
+        self.clipsToBounds = false
+    }
+    func makeButtonCurvedWithShadow(radius: CGFloat){
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 10)
+        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.25
+        self.clipsToBounds = false
+    }
+}
+extension UITextField{
+    func imageLeftSide(imageName: String){
+        self.leftViewMode = .always
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 10))
+        let image = UIImage(named: imageName)
+        imageView.image = image
+        
+        self.leftView = imageView
+    }
+    
+}

@@ -24,6 +24,22 @@ class LoginVC: UIViewController {
         lblRegisterButton.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(registerBtn))
         lblRegisterButton.addGestureRecognizer(tap)
+        
+        txtEmail.layer.cornerRadius = 16
+        txtEmail.imageLeftSide(imageName: "User")
+        txtEmail.layer.masksToBounds = true
+        
+        txtPass.layer.cornerRadius = 16
+        txtPass.imageLeftSide(imageName: "lock")
+        txtPass.layer.masksToBounds = true
+        
+        btnLogin.layer.cornerRadius = 25
+        btnLogin.layer.masksToBounds = true
+        btnLogin.layer.shadowColor = UIColor.black.cgColor
+        btnLogin.layer.shadowOffset = CGSize(width: 0, height: 10)
+        btnLogin.layer.shadowRadius = 10
+        btnLogin.layer.shadowOpacity = 0.25
+        btnLogin.clipsToBounds = false
     }
     
     
@@ -61,9 +77,12 @@ class LoginVC: UIViewController {
 //            UserDefaults.standard.set(strongSelf.txtEmail.text ?? "", forKey: "email")
             
             strongSelf.showToastAlert(strmsg: "Logged In successfully", preferredStyle: .alert)
+            
 //            NotificationCenter.default.post(name: .didLoginNotification, object: nil)
             
         })
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarStory")
+        UIApplication.shared.windows.first?.rootViewController = vc
     }
     @objc func registerBtn(){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegisterStory") as! RegisterVC

@@ -7,7 +7,9 @@
 
 import UIKit
 import FirebaseAuth
-class MedicalInfoRegisterVC: UIViewController {
+class MedicalInfoRegisterVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    
     
     
     //MARK: Outlets
@@ -26,11 +28,40 @@ class MedicalInfoRegisterVC: UIViewController {
     //MARK: Variables
     var medAppUser: MedAppUser?
     var userCredentials = [String:String]()
+    var pickerArr = [String]()
+    var selectedTextField = UITextField()
     //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        txtAge.layer.cornerRadius = 16
+        txtAge.layer.masksToBounds = true
+        
+        txtGender.layer.cornerRadius = 16
+        txtGender.layer.masksToBounds = true
+        
+        txtHeight.layer.cornerRadius = 16
+        txtHeight.layer.masksToBounds = true
+        
+        txtWeight.layer.cornerRadius = 16
+        txtWeight.layer.masksToBounds = true
+        
+        txtAllergies.layer.cornerRadius = 16
+        txtAllergies.layer.masksToBounds = true
+        
+        txtBloodGroup.layer.cornerRadius = 16
+        txtBloodGroup.layer.masksToBounds = true
+        
+        txtInsurance.layer.cornerRadius = 16
+        txtInsurance.layer.masksToBounds = true
        
+        btnRegister.layer.cornerRadius = 25
+        btnRegister.layer.masksToBounds = true
+        btnRegister.layer.shadowColor = UIColor.black.cgColor
+        btnRegister.layer.shadowOffset = CGSize(width: 0, height: 10)
+        btnRegister.layer.shadowRadius = 10
+        btnRegister.layer.shadowOpacity = 0.25
+        btnRegister.clipsToBounds = false
     }
     
     @IBAction func btnRegister(_ sender: Any) {
@@ -66,13 +97,13 @@ class MedicalInfoRegisterVC: UIViewController {
         }
         else{
 //            medAppUser?.email = medAppUser?.safeEmail ?? ""
-            medAppUser?.age = Int(age) ?? 0
+            medAppUser?.age = age
             medAppUser?.gender = gender
             medAppUser?.height = height
-            medAppUser?.weight = Int(weight) ?? 0
+            medAppUser?.weight = weight
             medAppUser?.allergies = allergies
             medAppUser?.bloodGrp = bloodGrp
-            medAppUser?.insurance = insurance == "yes" ? true : false
+            medAppUser?.insurance = insurance == "Yes" ? true : false
             DatabaseManager.shared.userExists(with: medAppUser?.email ?? "", completion: {[weak self] exists in
                 guard let strongSelf = self else {
                     return
@@ -105,7 +136,107 @@ class MedicalInfoRegisterVC: UIViewController {
 //                    strongSelf.navigationController?.dismiss(animated: true)
                 })
             })
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarStory")
+            UIApplication.shared.windows.first?.rootViewController = vc
 
         }
+    }
+    
+    //MARK: Textfield methods
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200))
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.dismissAction))
+        toolBar.setItems([button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+        if textField == txtAge{
+            selectedTextField = txtAge
+            var ageArr = [String]()
+            for i in 0 ... 100{
+                ageArr.append(String(i))
+            }
+            pickerArr = ageArr
+            textField.inputView = pickerView
+            
+        }
+        else if textField == txtGender{
+            selectedTextField = txtGender
+            pickerArr = ["Male", "Female","Other"]
+            textField.inputView = pickerView
+            
+        }
+        else if textField == txtHeight{
+            selectedTextField = txtHeight
+            var heightArr = [String]()
+            for i in 0 ... 300{
+                heightArr.append(String(i))
+            }
+            pickerArr = heightArr
+            textField.inputView = pickerView
+            
+        }
+        else if textField == txtWeight{
+            selectedTextField = txtWeight
+            var weightArr = [String]()
+            for i in 0 ... 300{
+                weightArr.append(String(i))
+            }
+            pickerArr = weightArr
+            textField.inputView = pickerView
+           
+        }
+        else if textField == txtBloodGroup{
+            selectedTextField = txtBloodGroup
+            pickerArr = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+            textField.inputView = pickerView
+           
+        }
+        else if textField == txtInsurance{
+            selectedTextField = txtInsurance
+            pickerArr = ["Yes","No","Don't know"]
+            textField.inputView = pickerView
+            
+        }
+        
+        return true
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerArr.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerArr[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if selectedTextField ==  txtAge{
+            selectedTextField.text = "\(pickerArr[row]) years"
+        }
+        else if selectedTextField ==  txtGender{
+            selectedTextField.text = "\(pickerArr[row])"
+        }
+        else if selectedTextField ==  txtHeight{
+            selectedTextField.text = "\(pickerArr[row]) cm"
+        }
+        else if selectedTextField ==  txtWeight{
+            selectedTextField.text = "\(pickerArr[row]) kgs"
+        }
+        else if selectedTextField ==  txtBloodGroup{
+            selectedTextField.text = "\(pickerArr[row])"
+        }
+        else if selectedTextField ==  txtInsurance{
+            selectedTextField.text = "\(pickerArr[row])"
+        }
+    }
+    @objc func dismissAction() {
+        view.endEditing(true)
     }
 }

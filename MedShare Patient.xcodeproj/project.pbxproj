@@ -12,6 +12,7 @@
 		C00C15262BEBC882000A9C0E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C15252BEBC882000A9C0E /* DatabaseManager.swift */; };
 		C00C15282BEBCC70000A9C0E /* HelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C15272BEBCC70000A9C0E /* HelperClass.swift */; };
 		C00C152C2BEBD627000A9C0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C00C152B2BEBD627000A9C0E /* GoogleService-Info.plist */; };
+		C00EB8342BECCE1C005ACF3B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EB8332BECCE1C005ACF3B /* HomeVC.swift */; };
 		C0132C4F2BEB7656005EC7AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C4E2BEB7656005EC7AC /* AppDelegate.swift */; };
 		C0132C512BEB7656005EC7AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C502BEB7656005EC7AC /* SceneDelegate.swift */; };
 		C0132C532BEB7656005EC7AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C522BEB7656005EC7AC /* ViewController.swift */; };
@@ -24,6 +25,8 @@
 		C0132C812BEB7743005EC7AC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C802BEB7743005EC7AC /* LoginVC.swift */; };
 		C0132C832BEB7775005EC7AC /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C822BEB7775005EC7AC /* RegisterVC.swift */; };
 		C0132C852BEB7790005EC7AC /* MedicalInfoRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */; };
+		C0508A6D2BECDF5F00EADA19 /* SpecialityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0508A6C2BECDF5F00EADA19 /* SpecialityCell.swift */; };
+		C0508A6F2BECDF7500EADA19 /* CityHospitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0508A6E2BECDF7500EADA19 /* CityHospitalCell.swift */; };
 		C85E3F101D686841CE2DCFCC /* Pods_MedShare_Patient_MedShare_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBC9C821BE33BA23F501EBE /* Pods_MedShare_Patient_MedShare_PatientUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,7 @@
 		C00C15252BEBC882000A9C0E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C00C15272BEBCC70000A9C0E /* HelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClass.swift; sourceTree = "<group>"; };
 		C00C152B2BEBD627000A9C0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C00EB8332BECCE1C005ACF3B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C0132C4B2BEB7656005EC7AC /* MedShare Patient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedShare Patient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0132C4E2BEB7656005EC7AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0132C502BEB7656005EC7AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		C0132C802BEB7743005EC7AC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C0132C822BEB7775005EC7AC /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoRegisterVC.swift; sourceTree = "<group>"; };
+		C0508A6C2BECDF5F00EADA19 /* SpecialityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialityCell.swift; sourceTree = "<group>"; };
+		C0508A6E2BECDF7500EADA19 /* CityHospitalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHospitalCell.swift; sourceTree = "<group>"; };
 		E8245C80D589D7EC37EA4893 /* Pods-MedShare Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare Patient.debug.xcconfig"; path = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient.debug.xcconfig"; sourceTree = "<group>"; };
 		E907EBF636510F925EC557CA /* Pods-MedShare PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare PatientTests.debug.xcconfig"; path = "Target Support Files/Pods-MedShare PatientTests/Pods-MedShare PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F30012D3388DEB89815A297E /* Pods-MedShare Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedShare Patient.release.xcconfig"; path = "Target Support Files/Pods-MedShare Patient/Pods-MedShare Patient.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 				C0132C802BEB7743005EC7AC /* LoginVC.swift */,
 				C0132C822BEB7775005EC7AC /* RegisterVC.swift */,
 				C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */,
+				C00EB8332BECCE1C005ACF3B /* HomeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +212,8 @@
 		C0132C7F2BEB76A8005EC7AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C0508A6C2BECDF5F00EADA19 /* SpecialityCell.swift */,
+				C0508A6E2BECDF7500EADA19 /* CityHospitalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -452,10 +461,13 @@
 				C0132C532BEB7656005EC7AC /* ViewController.swift in Sources */,
 				C0132C4F2BEB7656005EC7AC /* AppDelegate.swift in Sources */,
 				C00C15282BEBCC70000A9C0E /* HelperClass.swift in Sources */,
+				C00EB8342BECCE1C005ACF3B /* HomeVC.swift in Sources */,
 				C0132C812BEB7743005EC7AC /* LoginVC.swift in Sources */,
 				C0132C852BEB7790005EC7AC /* MedicalInfoRegisterVC.swift in Sources */,
+				C0508A6D2BECDF5F00EADA19 /* SpecialityCell.swift in Sources */,
 				C0132C512BEB7656005EC7AC /* SceneDelegate.swift in Sources */,
 				C0132C832BEB7775005EC7AC /* RegisterVC.swift in Sources */,
+				C0508A6F2BECDF7500EADA19 /* CityHospitalCell.swift in Sources */,
 				C00C15262BEBC882000A9C0E /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

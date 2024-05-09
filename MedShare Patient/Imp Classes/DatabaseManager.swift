@@ -124,10 +124,10 @@ struct MedAppUser{
     var name: String
     var email: String
     var mobileNumber: String
-    var age: Int
+    var age: String
     var gender: String
     var height: String
-    var weight: Int
+    var weight: String
     var allergies: String
     var bloodGrp: String
     var insurance: Bool

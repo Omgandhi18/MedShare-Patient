@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController,UITextFieldDelegate{
     
     //MARK: Outlets
     
@@ -25,9 +25,31 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        txtFullName.layer.cornerRadius = 16
+        txtFullName.imageLeftSide(imageName: "User")
+        txtFullName.layer.masksToBounds = true
+        
+        txtMobile.layer.cornerRadius = 16
+        txtMobile.imageLeftSide(imageName: "mobile")
+        txtMobile.layer.masksToBounds = true
+        
+        txtEmail.layer.cornerRadius = 16
+        txtEmail.imageLeftSide(imageName: "email")
+        txtEmail.layer.masksToBounds = true
+        
+        txtPass.layer.cornerRadius = 16
+        txtPass.imageLeftSide(imageName: "lock")
+        txtPass.layer.masksToBounds = true
+        
+        btnContinue.layer.cornerRadius = 25
+        btnContinue.layer.masksToBounds = true
+        btnContinue.layer.shadowColor = UIColor.black.cgColor
+        btnContinue.layer.shadowOffset = CGSize(width: 0, height: 10)
+        btnContinue.layer.shadowRadius = 10
+        btnContinue.layer.shadowOpacity = 0.25
+        btnContinue.clipsToBounds = false
     }
-    
+    //MARK: Button methods
     @IBAction func btnContinue(_ sender: Any) {
         guard let name = txtFullName.text,
               let email = txtEmail.text,
@@ -49,11 +71,13 @@ class RegisterVC: UIViewController {
         }
         else{
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "MedicalInfoRegisterStory") as! MedicalInfoRegisterVC
-            vc.medAppUser = MedAppUser(name: name, email: email, mobileNumber: mobile, age: 0, gender: "", height: "", weight: 0, allergies: "", bloodGrp: "", insurance: false)
+            vc.medAppUser = MedAppUser(name: name, email: email, mobileNumber: mobile, age: "", gender: "", height: "", weight: "", allergies: "", bloodGrp: "", insurance: false)
             vc.userCredentials = ["email" : email,"pass" : pass]
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    
     
 
 }
