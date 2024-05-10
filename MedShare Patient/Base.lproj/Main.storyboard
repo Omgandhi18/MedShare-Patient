@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -799,6 +800,231 @@ and you can edit it anytime.</string>
             </objects>
             <point key="canvasLocation" x="1061.5999999999999" y="2273.6131934032987"/>
         </scene>
+        <!--MapVC-->
+        <scene sceneID="lzg-i4-oGp">
+            <objects>
+                <viewController storyboardIdentifier="MapStory" id="CSH-qg-aO4" customClass="MapVC" customModule="MedShare_Patient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nbn-Wl-2IE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospitals near you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwD-mQ-u2v">
+                                <rect key="frame" x="30" y="36" width="315" height="95.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" name="DarkTeal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-zh-BsR">
+                                <rect key="frame" x="0.0" y="147.5" width="375" height="519.5"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DQC-iY-xEe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dwD-mQ-u2v" firstAttribute="leading" secondItem="DQC-iY-xEe" secondAttribute="leading" constant="30" id="AAc-9h-fSC"/>
+                            <constraint firstItem="dwD-mQ-u2v" firstAttribute="top" secondItem="DQC-iY-xEe" secondAttribute="top" constant="16" id="Q1W-gg-lEJ"/>
+                            <constraint firstItem="n6F-zh-BsR" firstAttribute="leading" secondItem="DQC-iY-xEe" secondAttribute="leading" id="RPV-02-E16"/>
+                            <constraint firstItem="DQC-iY-xEe" firstAttribute="trailing" secondItem="dwD-mQ-u2v" secondAttribute="trailing" constant="30" id="UUe-jc-Tzp"/>
+                            <constraint firstItem="DQC-iY-xEe" firstAttribute="bottom" secondItem="n6F-zh-BsR" secondAttribute="bottom" id="YmO-MB-qOU"/>
+                            <constraint firstItem="n6F-zh-BsR" firstAttribute="top" secondItem="dwD-mQ-u2v" secondAttribute="bottom" constant="16" id="tCG-4K-9tZ"/>
+                            <constraint firstItem="DQC-iY-xEe" firstAttribute="trailing" secondItem="n6F-zh-BsR" secondAttribute="trailing" id="xrd-1y-wPf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTopLabel" destination="dwD-mQ-u2v" id="dRC-0i-FCs"/>
+                        <outlet property="mapView" destination="n6F-zh-BsR" id="efH-XG-0mJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geT-7W-cY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="3116"/>
+        </scene>
+        <!--Hospital DetailsVC-->
+        <scene sceneID="ajd-f2-a7H">
+            <objects>
+                <viewController storyboardIdentifier="HospitalDetailsStory" id="QtI-vp-QyY" customClass="HospitalDetailsVC" customModule="MedShare_Patient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hm-zI-Cyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospital" translatesAutoresizingMaskIntoConstraints="NO" id="MDe-o8-RHi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="th0-30-TOf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ0-Z5-RiG">
+                                <rect key="frame" x="30" y="196" width="249" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="gWI-Wl-eD5">
+                                <rect key="frame" x="30" y="224.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="5uv-QO-qgb"/>
+                                    <constraint firstAttribute="width" constant="15" id="isZ-Hb-qTb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LG-La-8ih">
+                                <rect key="frame" x="53" y="224.5" width="226" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfb-GZ-WWM">
+                                <rect key="frame" x="295" y="196" width="50" height="50"/>
+                                <color key="backgroundColor" name="LightTeal"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Y1-CQ-qfE"/>
+                                    <constraint firstAttribute="width" constant="50" id="Bfp-X1-ZzK"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Calendar"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipm-w7-chl">
+                                <rect key="frame" x="0.0" y="254" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tq3-rS-3Al"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5l-BZ-NES">
+                                <rect key="frame" x="30" y="263" width="269" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmo-IG-ipD">
+                                <rect key="frame" x="315" y="263" width="30" height="30"/>
+                                <color key="backgroundColor" name="LightTeal"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="DPt-vk-UCL"/>
+                                    <constraint firstAttribute="height" constant="30" id="WMB-lK-8gc"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Plane"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TcV-Fv-xhd">
+                                <rect key="frame" x="30" y="375" width="315" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-7b-M1z">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="29"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-GB-SPh">
+                                        <rect key="frame" x="0.0" y="37" width="315" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-GS-un4">
+                                        <rect key="frame" x="0.0" y="69" width="315" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k78-9V-t9t">
+                                        <rect key="frame" x="0.0" y="96.5" width="315" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-gv-pcg">
+                                        <rect key="frame" x="0.0" y="128.5" width="315" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-IF-htC">
+                                        <rect key="frame" x="0.0" y="156" width="315" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx6-qr-FZw">
+                                <rect key="frame" x="30" y="309" width="315" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aNC-Ke-JV4"/>
+                                </constraints>
+                                <color key="tintColor" name="DarkTeal"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Call Hospital" image="phone.fill" catalog="system">
+                                    <color key="titleColor" name="DarkTeal"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-oX-IfM">
+                                <rect key="frame" x="166.5" y="32" width="42" height="5"/>
+                                <color key="backgroundColor" red="0.12549020350000001" green="0.086274504660000001" blue="0.047058824450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="Kez-lP-QMs"/>
+                                    <constraint firstAttribute="width" constant="42" id="NtZ-W0-dW1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="exc-of-hQ9"/>
+                        <color key="backgroundColor" name="DarkTeal"/>
+                        <constraints>
+                            <constraint firstItem="JJ0-Z5-RiG" firstAttribute="top" secondItem="MDe-o8-RHi" secondAttribute="bottom" constant="16" id="2b3-mo-VNT"/>
+                            <constraint firstItem="exc-of-hQ9" firstAttribute="trailing" secondItem="mmo-IG-ipD" secondAttribute="trailing" constant="30" id="6ZS-5m-c6k"/>
+                            <constraint firstItem="gWI-Wl-eD5" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" constant="30" id="E18-35-mHd"/>
+                            <constraint firstItem="e5l-BZ-NES" firstAttribute="top" secondItem="Ipm-w7-chl" secondAttribute="bottom" constant="8" id="F3U-UR-qhQ"/>
+                            <constraint firstItem="TcV-Fv-xhd" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" constant="30" id="Fh2-Bf-0G0"/>
+                            <constraint firstItem="Cx6-qr-FZw" firstAttribute="top" secondItem="mmo-IG-ipD" secondAttribute="bottom" constant="16" id="GdA-wE-K5S"/>
+                            <constraint firstItem="mmo-IG-ipD" firstAttribute="leading" secondItem="e5l-BZ-NES" secondAttribute="trailing" constant="16" id="Gfe-dH-Rlp"/>
+                            <constraint firstItem="gWI-Wl-eD5" firstAttribute="top" secondItem="JJ0-Z5-RiG" secondAttribute="bottom" constant="8" id="HJg-GQ-c21"/>
+                            <constraint firstItem="Yfb-GZ-WWM" firstAttribute="leading" secondItem="5LG-La-8ih" secondAttribute="trailing" constant="16" id="JQT-pQ-0va"/>
+                            <constraint firstItem="5LG-La-8ih" firstAttribute="leading" secondItem="gWI-Wl-eD5" secondAttribute="trailing" constant="8" id="MM4-2P-iKp"/>
+                            <constraint firstItem="exc-of-hQ9" firstAttribute="trailing" secondItem="TcV-Fv-xhd" secondAttribute="trailing" constant="30" id="NJa-56-mln"/>
+                            <constraint firstItem="mmo-IG-ipD" firstAttribute="top" secondItem="Ipm-w7-chl" secondAttribute="bottom" constant="8" id="Nrj-4F-CxY"/>
+                            <constraint firstItem="MDe-o8-RHi" firstAttribute="top" secondItem="exc-of-hQ9" secondAttribute="top" id="QZf-3k-jjG"/>
+                            <constraint firstItem="MDe-o8-RHi" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" id="Tn4-by-ekP"/>
+                            <constraint firstItem="Y4f-oX-IfM" firstAttribute="centerX" secondItem="8hm-zI-Cyg" secondAttribute="centerX" id="ZKw-jd-TwU"/>
+                            <constraint firstItem="Cx6-qr-FZw" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" constant="30" id="ZzJ-v9-dyz"/>
+                            <constraint firstItem="Yfb-GZ-WWM" firstAttribute="leading" secondItem="JJ0-Z5-RiG" secondAttribute="trailing" constant="16" id="bU6-Bv-4NW"/>
+                            <constraint firstItem="Y4f-oX-IfM" firstAttribute="top" secondItem="exc-of-hQ9" secondAttribute="top" constant="12" id="g02-n4-zOy"/>
+                            <constraint firstItem="JJ0-Z5-RiG" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" constant="30" id="h8a-3v-zFe"/>
+                            <constraint firstItem="TcV-Fv-xhd" firstAttribute="top" secondItem="Cx6-qr-FZw" secondAttribute="bottom" constant="16" id="hTH-nt-INH"/>
+                            <constraint firstItem="5LG-La-8ih" firstAttribute="top" secondItem="JJ0-Z5-RiG" secondAttribute="bottom" constant="8" id="io2-Xw-hVX"/>
+                            <constraint firstItem="exc-of-hQ9" firstAttribute="trailing" secondItem="Yfb-GZ-WWM" secondAttribute="trailing" constant="30" id="po6-9q-amz"/>
+                            <constraint firstItem="exc-of-hQ9" firstAttribute="trailing" secondItem="Ipm-w7-chl" secondAttribute="trailing" id="rGQ-bL-HxY"/>
+                            <constraint firstItem="exc-of-hQ9" firstAttribute="trailing" secondItem="Cx6-qr-FZw" secondAttribute="trailing" constant="30" id="rlb-Qb-1Bn"/>
+                            <constraint firstItem="e5l-BZ-NES" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" constant="30" id="sNc-2q-emx"/>
+                            <constraint firstItem="Yfb-GZ-WWM" firstAttribute="top" secondItem="MDe-o8-RHi" secondAttribute="bottom" constant="16" id="tE4-qq-mlv"/>
+                            <constraint firstItem="Ipm-w7-chl" firstAttribute="leading" secondItem="exc-of-hQ9" secondAttribute="leading" id="tFz-WV-NOw"/>
+                            <constraint firstItem="exc-of-hQ9" firstAttribute="trailing" secondItem="MDe-o8-RHi" secondAttribute="trailing" id="uTx-2I-m4b"/>
+                            <constraint firstItem="Ipm-w7-chl" firstAttribute="top" secondItem="Yfb-GZ-WWM" secondAttribute="bottom" constant="8" id="xi1-q3-2ho"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCall" destination="Cx6-qr-FZw" id="MKF-fs-L09"/>
+                        <outlet property="btnLocations" destination="mmo-IG-ipD" id="eYC-fF-QRc"/>
+                        <outlet property="btnMakeAppointment" destination="Yfb-GZ-WWM" id="4QJ-5U-9Cj"/>
+                        <outlet property="lblAddress" destination="AHD-gv-pcg" id="8UW-fQ-AiW"/>
+                        <outlet property="lblDistance" destination="hTY-IF-htC" id="lml-YY-OWM"/>
+                        <outlet property="lblHospitalName" destination="JJ0-Z5-RiG" id="eiC-wO-8I9"/>
+                        <outlet property="lblLocation" destination="5LG-La-8ih" id="pQ4-qu-t5E"/>
+                        <outlet property="lblPhoneNumber" destination="XUI-GS-un4" id="yI9-8n-cY9"/>
+                        <outlet property="lblTopBar" destination="Y4f-oX-IfM" id="w1E-zB-KLb"/>
+                        <outlet property="lblType" destination="e5l-BZ-NES" id="Yy5-NC-ZX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Foe-1E-7tr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="3116"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Suf-oE-zV3">
             <objects>
@@ -897,6 +1123,7 @@ and you can edit it anytime.</string>
         <image name="Plane" width="20" height="20"/>
         <image name="hospital" width="3428" height="2333"/>
         <image name="location" width="30" height="30"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <namedColor name="DarkTeal">
             <color red="0.0" green="0.42745098039215684" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

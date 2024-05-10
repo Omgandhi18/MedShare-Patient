@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate{
     
 
     //MARK: Outlets
@@ -18,6 +19,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
     //MARK: Variables
     var doctorsArr = [["title":"Dentist","image":"tooth"], ["title":"Cardiologist","image":"heart"], ["title":"Orthopaedic","image":"spine"],["title":"Neurologist","image":"brain"]]
     var hospitalArr = [["Name" : "Hospital 1","Location" : "Vadodara","Latitude" : 0.00,"Longitude" : 0.00,"hospitalType" : "Dentist"], ["Name" : "Hospital 2","Location" : "Vadodara","Latitude" : 0.00,"Longitude" : 0.00,"hospitalType" : "Dentist"]]
+    public var location: CLLocationCoordinate2D?
+    public var userLocation = CLLocationCoordinate2D()
+    let locationManager = CLLocationManager()
     //MARK: Viewcontroller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +38,28 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
         
         clcHospitals.delegate = self
         clcHospitals.dataSource = self
+        
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        DispatchQueue.global().async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager.delegate = self
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                self.locationManager.startUpdatingLocation()
+               
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     
     //MARK: Button methods
     @IBAction func btnFindHospitals(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapStory") as! MapVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK: Collectionview methods
@@ -73,6 +94,19 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
             return cell
         }
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == clcHospitals{
+            let selectedHospital = hospitalArr[indexPath.row]
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HospitalDetailsStory") as! HospitalDetailsVC
+            viewController.hospitalData = selectedHospital ?? [:]
+            
+            if let presentationController = viewController.presentationController as? UISheetPresentationController {
+                presentationController.detents = [.medium(),.large()]
+            }
+            
+            self.present(viewController, animated: true)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == clcSpeciality{
             return CGSize(width: 75, height: 110)
@@ -82,7 +116,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30
     }
-    
     
 }
 
