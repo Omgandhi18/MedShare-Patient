@@ -14,7 +14,8 @@ pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'Firebase/Analytics'		
+  pod 'Firebase/Analytics'
+pod 'lottie-ios'		
   target 'MedShare PatientTests' do
     inherit! :search_paths
     # Pods for testing

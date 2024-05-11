@@ -39,6 +39,10 @@ class AllHospitalVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.btnMakeAppointment.makeButtonRoundWithShadow()
         
         cell.btnDirections.makeButtonRoundWithShadow()
+        
+        cell.btnMakeAppointment.tag = indexPath.row
+        cell.btnMakeAppointment.addTarget(self, action: #selector(makeAppointment(_:)), for: .touchUpInside)
+        
         cell.selectionStyle = .none
         cell.lblHospitalName.text = filteredHospitals[indexPath.row]["Name"] as? String
         cell.lblLocation.text = filteredHospitals[indexPath.row]["Location"] as? String
@@ -55,6 +59,11 @@ class AllHospitalVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         
         self.present(viewController, animated: true)
+    }
+    @objc func makeAppointment(_ sender: UIButton){
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

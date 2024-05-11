@@ -62,6 +62,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func makeAppointment(_ sender: UIButton){
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     //MARK: Collectionview methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == clcSpeciality{
@@ -87,6 +93,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
             cell.btnAppointment.makeButtonRoundWithShadow()
             
             cell.btnDirections.makeButtonRoundWithShadow()
+            
+            cell.btnAppointment.tag = indexPath.row
+            cell.btnAppointment.addTarget(self, action: #selector(makeAppointment(_:)), for: .touchUpInside)
             
             cell.lblName.text = hospitalArr[indexPath.row]["Name"] as? String
             cell.lblLocation.text = hospitalArr[indexPath.row]["Location"] as? String
