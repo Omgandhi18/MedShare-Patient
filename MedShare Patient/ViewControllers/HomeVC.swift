@@ -98,7 +98,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
         if collectionView == clcHospitals{
             let selectedHospital = hospitalArr[indexPath.row]
             let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HospitalDetailsStory") as! HospitalDetailsVC
-            viewController.hospitalData = selectedHospital ?? [:]
+            viewController.hospitalData = selectedHospital
             
             if let presentationController = viewController.presentationController as? UISheetPresentationController {
                 presentationController.detents = [.medium(),.large()]
