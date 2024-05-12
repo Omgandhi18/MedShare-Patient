@@ -25,6 +25,8 @@
 		C0132C812BEB7743005EC7AC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C802BEB7743005EC7AC /* LoginVC.swift */; };
 		C0132C832BEB7775005EC7AC /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C822BEB7775005EC7AC /* RegisterVC.swift */; };
 		C0132C852BEB7790005EC7AC /* MedicalInfoRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */; };
+		C029D8CF2BF0866E00542472 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C029D8CE2BF0866E00542472 /* ProfileVC.swift */; };
+		C029D8D12BF08D2600542472 /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C029D8D02BF08D2600542472 /* AppointmentCell.swift */; };
 		C02FAB4E2BEE0DCF007E64DB /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02FAB4D2BEE0DCF007E64DB /* MapVC.swift */; };
 		C04A8E422BEF567F005B7C8E /* AllHospitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A8E412BEF567F005B7C8E /* AllHospitalCell.swift */; };
 		C04A8E442BEF5774005B7C8E /* AllHospitalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A8E432BEF5774005B7C8E /* AllHospitalVC.swift */; };
@@ -80,6 +82,8 @@
 		C0132C802BEB7743005EC7AC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C0132C822BEB7775005EC7AC /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C0132C842BEB7790005EC7AC /* MedicalInfoRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInfoRegisterVC.swift; sourceTree = "<group>"; };
+		C029D8CE2BF0866E00542472 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C029D8D02BF08D2600542472 /* AppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
 		C02FAB4D2BEE0DCF007E64DB /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		C04A8E412BEF567F005B7C8E /* AllHospitalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHospitalCell.swift; sourceTree = "<group>"; };
 		C04A8E432BEF5774005B7C8E /* AllHospitalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHospitalVC.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				C04A8E432BEF5774005B7C8E /* AllHospitalVC.swift */,
 				C0FAE1952BEFED1C006F9776 /* MakeAppointmentVC.swift */,
 				C06075BE2BEFF3E5007AF3A6 /* AppointmentLoadingVC.swift */,
+				C029D8CE2BF0866E00542472 /* ProfileVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				C0508A6C2BECDF5F00EADA19 /* SpecialityCell.swift */,
 				C0508A6E2BECDF7500EADA19 /* CityHospitalCell.swift */,
 				C04A8E412BEF567F005B7C8E /* AllHospitalCell.swift */,
+				C029D8D02BF08D2600542472 /* AppointmentCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C029D8D12BF08D2600542472 /* AppointmentCell.swift in Sources */,
 				C0132C532BEB7656005EC7AC /* ViewController.swift in Sources */,
 				C07253272BEE1ABB0025AA22 /* HospitalDetailsVC.swift in Sources */,
 				C02FAB4E2BEE0DCF007E64DB /* MapVC.swift in Sources */,
@@ -492,6 +499,7 @@
 				C0132C852BEB7790005EC7AC /* MedicalInfoRegisterVC.swift in Sources */,
 				C0508A6D2BECDF5F00EADA19 /* SpecialityCell.swift in Sources */,
 				C0132C512BEB7656005EC7AC /* SceneDelegate.swift in Sources */,
+				C029D8CF2BF0866E00542472 /* ProfileVC.swift in Sources */,
 				C0132C832BEB7775005EC7AC /* RegisterVC.swift in Sources */,
 				C0508A6F2BECDF7500EADA19 /* CityHospitalCell.swift in Sources */,
 				C00C15262BEBC882000A9C0E /* DatabaseManager.swift in Sources */,

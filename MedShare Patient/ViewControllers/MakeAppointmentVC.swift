@@ -35,6 +35,8 @@ class MakeAppointmentVC: UIViewController {
     }
     
     @IBAction func btnSendRequest(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "processingRequestStory") as! AppointmentLoadingVC
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     

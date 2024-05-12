@@ -58,6 +58,7 @@ class LoginVC: UIViewController {
 //            }
             guard let result = authResult, error == nil else{
                 print("Failed to log in")
+                strongSelf.showToastAlert(strmsg: "Failed to log in", preferredStyle: .alert)
                 return
             }
             let user = result.user
@@ -79,10 +80,10 @@ class LoginVC: UIViewController {
             strongSelf.showToastAlert(strmsg: "Logged In successfully", preferredStyle: .alert)
             
 //            NotificationCenter.default.post(name: .didLoginNotification, object: nil)
-            
+            let vc = strongSelf.storyboard?.instantiateViewController(withIdentifier: "tabBarStory")
+            UIApplication.shared.windows.first?.rootViewController = vc
         })
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarStory")
-        UIApplication.shared.windows.first?.rootViewController = vc
+       
     }
     @objc func registerBtn(){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegisterStory") as! RegisterVC
