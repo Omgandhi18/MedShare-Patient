@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseDatabase
 class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     //MARK: Outlets
     
@@ -17,7 +18,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     //MARK: Variables
     public var userLocation = CLLocationCoordinate2D()
     let locationManager = CLLocationManager()
-    var hospitalArr = [["Name" : "Hospital 1","Location" : "Vadodara","Latitude" : 55.930476,"Longitude" :  -3.256601,"hospitalType" : "Dentist"]]
+    var hospitalArr = [[String:Any]]()
+    let database = Database.database().reference()
     //MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +38,29 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
         mapView.pointOfInterestFilter = .excludingAll
         mapView.showsUserTrackingButton = true
         
-        let hospitalLocation = MKPointAnnotation()
-        hospitalLocation.coordinate = CLLocationCoordinate2D(latitude: hospitalArr[0]["Latitude"] as? Double ?? 0.00, longitude: hospitalArr[0]["Longitude"] as? Double ?? 0.00)
-        
-        mapView.addAnnotation(hospitalLocation)
+        getHospitals()
         
         // Do any additional setup after loading the view.
     }
-    
+    func getHospitals(){
+        database.child("hospitals").observeSingleEvent(of: .value, with: {[self] snapshot in
+            guard let value = snapshot.value as? [[String:Any]] else{
+                print(DatabaseManager.DatabaseError.failedToFetch)
+                return
+            }
+            hospitalArr = value
+            for value in hospitalArr{
+                let hospitalLocation = MKPointAnnotation()
+                let hospitalAddress = value["address"] as! [String: Any]
+                
+                hospitalLocation.coordinate = CLLocationCoordinate2D(latitude: hospitalAddress["latitude"] as? Double ?? 0.00, longitude: hospitalAddress["longitude"] as? Double ?? 0.00)
+                
+                mapView.addAnnotation(hospitalLocation)
+            }
+            
+            
+        })
+    }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             let identifier = "MyPin"
             
@@ -68,10 +85,11 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
         }
     func mapView(_ mapView: MKMapView, didSelect annotation: any MKAnnotation) {
         
-        let selectedHospital = hospitalArr.first(where: {annotation.coordinate.latitude == $0["Latitude"] as! CLLocationDegrees})
+        let selectedHospital = hospitalArr.first(where: {(annotation.coordinate.latitude == ($0["address"] as! [String: Any])["latitude"] as! CLLocationDegrees) && (annotation.coordinate.longitude == ($0["address"] as! [String: Any])["longitude"] as! CLLocationDegrees)})
        
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HospitalDetailsStory") as! HospitalDetailsVC
         viewController.hospitalData = selectedHospital ?? [:]
+        viewController.userLocation = CLLocation(latitude: mapView.userLocation.coordinate.latitude, longitude: mapView.userLocation.coordinate.longitude)
         
         if let presentationController = viewController.presentationController as? UISheetPresentationController {
             presentationController.detents = [.medium(),.large()]

@@ -130,14 +130,15 @@ class MedicalInfoRegisterVC: UIViewController, UITextFieldDelegate, UIPickerView
                         {
                             strongSelf.showToastAlert(strmsg: "User Created Success", preferredStyle: .alert)
                         }
+                        let vc = strongSelf.storyboard?.instantiateViewController(withIdentifier: "tabBarStory")
+                        UIApplication.shared.windows.first?.rootViewController = vc
                     })
 //                    UserDefaults.standard.set(strongSelf.txtEmail.text ?? "", forKey: "email")
 //                    UserDefaults.standard.set(strongSelf.txtName.text ?? "", forKey: "name")
 //                    strongSelf.navigationController?.dismiss(animated: true)
                 })
             })
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarStory")
-            UIApplication.shared.windows.first?.rootViewController = vc
+            
 
         }
     }

@@ -1683,6 +1683,9 @@ and you can edit it anytime.</string>
             <point key="canvasLocation" x="2813.5999999999999" y="1563.8680659670167"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="14s-C6-jJJ"/>
+    </designables>
     <resources>
         <image name="Calendar" width="30" height="30"/>
         <image name="Map" width="75" height="75"/>
