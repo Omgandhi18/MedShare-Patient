@@ -23,7 +23,7 @@ To get started with MedShare Patient, follow these steps:
 3. Configure Firebase:
 - Create a Firebase project on the Firebase Console (https://console.firebase.google.com/).
 - Add your Firebase configuration details to the project.
-- Enable Firebase Authentication and Cloud Firestore services for your project.
+- Enable Firebase Authentication services for your project.
 - Replace the Firebase configuration in the Xcode project with your own configuration.
 
 4. Run the application:
