@@ -7,8 +7,8 @@
 
 import UIKit
 import CoreLocation
-
-class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate{
+import FirebaseDatabase
+class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate, DataDelegate{
     
 
     //MARK: Outlets
@@ -18,10 +18,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
     
     //MARK: Variables
     var doctorsArr = [["title":"Dentist","image":"tooth"], ["title":"Cardiologist","image":"heart"], ["title":"Orthopaedic","image":"spine"],["title":"Neurologist","image":"brain"]]
-    var hospitalArr = [["Name" : "Hospital 1","Location" : "Vadodara","Latitude" : 0.00,"Longitude" : 0.00,"hospitalType" : "Dentist"], ["Name" : "Hospital 2","Location" : "Vadodara","Latitude" : 0.00,"Longitude" : 0.00,"hospitalType" : "Dentist"]]
+    var hospitalArr = [[String:Any]]()
     public var location: CLLocationCoordinate2D?
     public var userLocation = CLLocationCoordinate2D()
     let locationManager = CLLocationManager()
+    let database = Database.database().reference()
     //MARK: Viewcontroller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +53,23 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
                
             }
         }
+        getHospitals()
         
         // Do any additional setup after loading the view.
     }
-    
+    func getHospitals(){
+        database.child("hospitals").observeSingleEvent(of: .value, with: {[self] snapshot in
+            guard let value = snapshot.value as? [[String:Any]] else{
+                print(DatabaseManager.DatabaseError.failedToFetch)
+                return
+            }
+            hospitalArr = value
+           
+            clcHospitals.delegate = self
+            clcHospitals.dataSource = self
+            clcHospitals.reloadData()
+        })
+    }
     //MARK: Button methods
     @IBAction func btnFindHospitals(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapStory") as! MapVC
@@ -64,7 +78,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
     
     @objc func makeAppointment(_ sender: UIButton){
         
+        let data = hospitalArr[sender.tag]
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+        vc.hospitalData = data
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -97,9 +113,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
             cell.btnAppointment.tag = indexPath.row
             cell.btnAppointment.addTarget(self, action: #selector(makeAppointment(_:)), for: .touchUpInside)
             
-            cell.lblName.text = hospitalArr[indexPath.row]["Name"] as? String
-            cell.lblLocation.text = hospitalArr[indexPath.row]["Location"] as? String
-            cell.lblDocType.text = "Type: \(hospitalArr[indexPath.row]["hospitalType"] as? String ?? "")"
+            let address = hospitalArr[indexPath.row]["address"] as? [String:Any]
+            cell.lblName.text = hospitalArr[indexPath.row]["hospital_name"] as? String
+            cell.lblLocation.text = "\(address?["address_line_1"] as? String ?? ""), \(address?["city"] as? String ?? "")"
+            cell.lblDocType.text = "Type: \(hospitalArr[indexPath.row]["type"] as? String ?? "")"
             return cell
         }
     }
@@ -108,12 +125,21 @@ class HomeVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
             let selectedHospital = hospitalArr[indexPath.row]
             let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HospitalDetailsStory") as! HospitalDetailsVC
             viewController.hospitalData = selectedHospital
+            viewController.delegate = self
+            viewController.userLocation = CLLocation(latitude: locationManager.location?.coordinate.latitude ?? 0.00, longitude: locationManager.location?.coordinate.longitude ?? 0.00)
             
             if let presentationController = viewController.presentationController as? UISheetPresentationController {
                 presentationController.detents = [.medium(),.large()]
             }
             
             self.present(viewController, animated: true)
+        }
+    }
+    func sendData(data: [String : Any], isAppointment: Bool) {
+        if isAppointment{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+            vc.hospitalData = data
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

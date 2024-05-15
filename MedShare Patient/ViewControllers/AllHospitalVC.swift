@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
+import FirebaseDatabase
 
-class AllHospitalVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationBarDelegate{
+class AllHospitalVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationBarDelegate, DataDelegate, CLLocationManagerDelegate{
+    
+    
     
     
 
@@ -15,15 +19,36 @@ class AllHospitalVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var btnFilter: UIButton!
     @IBOutlet weak var tblHospitals: UITableView!
     
-    var hospitalArr = [["Name" : "Hospital 1","Location" : "Vadodara","Latitude" : 0.00,"Longitude" : 0.00,"hospitalType" : "Dentist"], ["Name" : "Hospital 2","Location" : "Vadodara","Latitude" : 0.00,"Longitude" : 0.00,"hospitalType" : "Dentist"]]
+    var hospitalArr = [[String:Any]]()
+    let database = Database.database().reference()
     var filteredHospitals = [[String: Any]]()
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DispatchQueue.global().async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager.delegate = self
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                self.locationManager.startUpdatingLocation()
+               
+            }
+        }
+        getHospitals()
         // Do any additional setup after loading the view.
-        tblHospitals.delegate = self
-        tblHospitals.dataSource = self
-        filteredHospitals = hospitalArr
+        
+    }
+    func getHospitals(){
+        database.child("hospitals").observeSingleEvent(of: .value, with: {[self] snapshot in
+            guard let value = snapshot.value as? [[String:Any]] else{
+                print(DatabaseManager.DatabaseError.failedToFetch)
+                return
+            }
+            hospitalArr = value
+            filteredHospitals = hospitalArr
+            tblHospitals.delegate = self
+            tblHospitals.dataSource = self
+            tblHospitals.reloadData()
+        })
     }
     
     
@@ -44,32 +69,42 @@ class AllHospitalVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.btnMakeAppointment.addTarget(self, action: #selector(makeAppointment(_:)), for: .touchUpInside)
         
         cell.selectionStyle = .none
-        cell.lblHospitalName.text = filteredHospitals[indexPath.row]["Name"] as? String
-        cell.lblLocation.text = filteredHospitals[indexPath.row]["Location"] as? String
-        cell.lblType.text = "Type: \(filteredHospitals[indexPath.row]["hospitalType"] as? String ?? "")"
+        let address = filteredHospitals[indexPath.row]["address"] as? [String:Any]
+        cell.lblHospitalName.text = filteredHospitals[indexPath.row]["hospital_name"] as? String
+        cell.lblLocation.text = "\(address?["address_line_1"] as? String ?? ""), \(address?["city"] as? String ?? "")"
+        cell.lblType.text = "Type: \(filteredHospitals[indexPath.row]["type"] as? String ?? "")"
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedHospital = filteredHospitals[indexPath.row]
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HospitalDetailsStory") as! HospitalDetailsVC
         viewController.hospitalData = selectedHospital
-        
+        viewController.delegate = self
+        viewController.userLocation = CLLocation(latitude: locationManager.location?.coordinate.latitude ?? 0.00, longitude: locationManager.location?.coordinate.longitude ?? 0.00)
         if let presentationController = viewController.presentationController as? UISheetPresentationController {
             presentationController.detents = [.medium(),.large()]
         }
         
         self.present(viewController, animated: true)
     }
+    func sendData(data: [String : Any], isAppointment: Bool) {
+        if isAppointment{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+            vc.hospitalData = data
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     @objc func makeAppointment(_ sender: UIButton){
-        
+        let data = filteredHospitals[sender.tag]
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+        vc.hospitalData = data
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
             if searchText.isEmpty == false {
-                filteredHospitals = hospitalArr.filter{($0["Name"] as! String).contains(searchText)}
+                filteredHospitals = hospitalArr.filter{($0["hospital_name"] as! String).contains(searchText)}
             }
         else{
             filteredHospitals = hospitalArr

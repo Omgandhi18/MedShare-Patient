@@ -9,6 +9,12 @@ import UIKit
 
 class AppointmentCell: UITableViewCell {
 
+    @IBOutlet weak var viewBack: UIView!
+    @IBOutlet weak var lblHospitalName: UILabel!
+    @IBOutlet weak var btnDirections: UIButton!
+    @IBOutlet weak var lblLocation: UILabel!
+    @IBOutlet weak var lblReasons: UILabel!
+    @IBOutlet weak var lblDateTime: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

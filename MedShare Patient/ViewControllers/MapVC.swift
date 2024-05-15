@@ -9,7 +9,8 @@ import UIKit
 import MapKit
 import CoreLocation
 import FirebaseDatabase
-class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
+class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, DataDelegate{
+    
     //MARK: Outlets
     
     @IBOutlet weak var mapView: MKMapView!
@@ -88,6 +89,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
         let selectedHospital = hospitalArr.first(where: {(annotation.coordinate.latitude == ($0["address"] as! [String: Any])["latitude"] as! CLLocationDegrees) && (annotation.coordinate.longitude == ($0["address"] as! [String: Any])["longitude"] as! CLLocationDegrees)})
        
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HospitalDetailsStory") as! HospitalDetailsVC
+        viewController.delegate = self
+        
         viewController.hospitalData = selectedHospital ?? [:]
         viewController.userLocation = CLLocation(latitude: mapView.userLocation.coordinate.latitude, longitude: mapView.userLocation.coordinate.longitude)
         
@@ -97,6 +100,15 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
         
         self.present(viewController, animated: true)
     }
+    //MARK: Protocol methods
+    func sendData(data: [String : Any], isAppointment: Bool) {
+        if isAppointment{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "makeAppointmentStory") as! MakeAppointmentVC
+            vc.hospitalData = data
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 
 }
 

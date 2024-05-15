@@ -7,6 +7,9 @@
 
 import UIKit
 import CoreLocation
+protocol DataDelegate: AnyObject {
+    func sendData(data: [String:Any], isAppointment: Bool)
+}
 class HospitalDetailsVC: UIViewController {
 //MARK: Outlets
     @IBOutlet weak var lblHospitalName: UILabel!
@@ -25,6 +28,7 @@ class HospitalDetailsVC: UIViewController {
     var hospitalData = [String:Any]()
     var userLocation = CLLocation(latitude: 0, longitude: 0)
     // ["Name" : "Hospital 1","Location" : "Vadodara","Latitude" : 55.930476,"Longitude" :  -3.256601,"hospitalType" : "Dentist"]
+    var delegate: DataDelegate?
     //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,13 @@ class HospitalDetailsVC: UIViewController {
     
     //MARK: Button methods
     
+    @IBAction func btnMakeAppointment(_ sender: Any) {
+        dismiss(animated: true)
+        delegate?.sendData(data: hospitalData, isAppointment: true)
+    }
     
-
+    @IBAction func btnDirections(_ sender: Any) {
+        
+    }
+    
 }
